@@ -1,15 +1,5 @@
 name: CMake Build Matrix
 
-on:
-  workflow_dispatch:
-  push:
-    branches:
-      - '*'
-
-  pull_request:
-    branches:
-      - master
-
 env:
   QT_VERSION: 6.2.4
   CCACHE_VERSION: 3.7.7
