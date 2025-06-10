@@ -1,7 +1,6 @@
 name: CMake Build Matrix
 
 on:
-  # 支持手动触发
   workflow_dispatch:
   push:
     branches:
@@ -12,7 +11,7 @@ on:
       - master
 
 env:
-  QT_VERSION: 6.6.1
+  QT_VERSION: 6.2.4
   CCACHE_VERSION: 3.7.7
   CACHE_PARTITION: dev
   HOST_N_CORES: 2
@@ -35,7 +34,7 @@ jobs:
         config:
         - {
             name: "Ubuntu Release", artifact: "Linux",
-            os: ubuntu-latest,
+            os: ubuntu-22.04,
             build_type: Release,
           }
         #- {
